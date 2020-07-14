@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>DEMO API</title>  
+</head>
+
+
+<body>
+ <div>
+	<h1>FLOWER PREDICTION</h1><br><br>
+	<h3>Enter the dimensions</h3>
+	<form action="{{ url_for('predict')}}" method="post">
+		<input type="number" step="0.1" name="sepal_l" placeholder="Sepal Length" required="required" />
+		<input type="number" step="0.1" name="sepal_w" placeholder="Sepal Width" required="required" />
+		<input type="number" step="0.1" name="petal_l" placeholder="Petal Length" required="required" />
+		<input type="number" step="0.1" name="petal_w" placeholder="Petal Width" required="required" />
+
+		<button type="submit" >Predict</button>
+	</form>
+	
+	<br>
+   <br>
+   {{ predicted }}
+
+ </div>
+
+
+</body>
+</html>
